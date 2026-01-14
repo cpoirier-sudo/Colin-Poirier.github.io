@@ -41,8 +41,8 @@
 }
 
 .card-img-holder img {
-    max-width: 100px; /* Icon stays professional and small */
-    max-height: 100px;
+    max-width: 10px; /* Icon stays professional and small */
+    max-height: 10px;
     width: auto;
     height: auto;
     object-fit: contain;
