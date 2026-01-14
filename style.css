@@ -1,31 +1,151 @@
-/* Styling for the content pages (About, Skills, Resume) */
-.detail-card {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 40px;
-    background: #fff;
-    border-radius: 20px;
-    border: 1px solid #f0f0f0;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+/* style.css */
+
+/* GLOBAL STYLES */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #ffffff; /* Pure White Background */
+    color: #000000; /* Pure Black Text */
+    line-height: 1.6;
 }
 
-.back-link {
+/* NAVIGATION BAR */
+header {
+    background-color: #000000; /* Solid Black Header */
+    padding: 1rem 0;
+    border-bottom: 3px solid #333;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    color: #ffffff; /* White text for logo */
+    font-size: 1.5rem;
+    font-weight: bold;
     text-decoration: none;
-    color: #6366f1;
-    font-size: 0.9rem;
-    font-weight: 600;
-    display: inline-block;
-    margin-bottom: 20px;
+    letter-spacing: 1px;
 }
 
-.detail-card h2 {
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-    border-bottom: 2px solid #f9f9f9;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #ffffff; /* White links in the header */
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7; /* Slight fade on hover */
+    text-decoration: underline;
+}
+
+/* MAIN CONTENT CONTAINER */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    background: #ffffff;
+    /* Removed the shadow, added a black border for a clean 'document' look */
+    border: 1px solid #000000; 
+    border-radius: 4px; 
+    min-height: 400px;
+}
+
+/* TYPOGRAPHY */
+h1 {
+    color: #000000;
+    border-bottom: 2px solid #000000;
     padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.8rem;
 }
 
-.item p {
-    line-height: 1.8;
-    color: #444;
+h2 {
+    color: #000000;
+    margin-top: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #000000;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    background-color: #000000; /* Black buttons */
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 2px;
+    margin-right: 10px;
+    border: 1px solid #000000;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #ffffff; /* Invert on hover */
+    color: #000000;
+    cursor: pointer;
+}
+
+/* RESUME SPECIFIC */
+.job-entry, .school-entry {
+    margin-bottom: 25px;
+    border-left: 4px solid #000000; /* Black accent line */
+    padding-left: 15px;
+}
+
+.date {
+    color: #444; /* Dark grey for dates so they distinguish slightly */
+    font-style: italic;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* SKILLS LIST */
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    background: #ffffff;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #000000; /* Black border around skills */
+    border-left: 8px solid #000000; /* Thick black bar on left */
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #000000;
+    font-size: 0.9rem;
+    border-top: 1px solid #000000;
 }
