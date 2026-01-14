@@ -3,19 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Resume | Colin Poirier</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS STYLING */
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background: white; color: black; line-height: 1.6; }
+        
+        /* NAVIGATION BAR */
+        header { background: black; padding: 20px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 1.1rem; }
+        nav a:hover { color: #ccc; text-decoration: underline; }
+        
+        /* MAIN CONTAINER */
+        main { max-width: 800px; margin: 40px auto; padding: 40px; border: 1px solid black; border-radius: 8px; }
+        
+        /* TYPOGRAPHY */
+        h1 { border-bottom: 2px solid black; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+        h2 { margin-top: 40px; background: #f4f4f4; padding: 10px; border-left: 5px solid black; font-size: 1.2rem; }
+        
+        /* RESUME ENTRIES */
+        .school-entry, .job-entry { margin-bottom: 20px; padding-left: 15px; border-left: 2px solid #ddd; }
+        .date { font-style: italic; color: #555; font-size: 0.9rem; margin-top: -10px; margin-bottom: 10px; }
+
+        /* LISTS */
+        ul { margin-top: 10px; padding-left: 20px; }
+        li { margin-bottom: 8px; }
+
+        /* CERTIFICATE GRID (IMAGES) */
+        .cert-grid { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
+        .cert-item { flex: 1; min-width: 200px; border: 1px solid #ddd; padding: 10px; text-align: center; border-radius: 4px; }
+        .cert-item img { width: 100%; height: auto; border: 1px solid #000; }
+        .caption { font-size: 0.85rem; margin-top: 8px; font-weight: bold; color: #333; }
+        
+        /* PDF VIEWER */
+        .pdf-viewer { width: 100%; height: 400px; border: 1px solid black; margin-top: 10px; }
+    </style>
 </head>
 <body>
 
     <header>
         <nav>
-            <a href="index.html" class="logo">Colin Poirier</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="skills.html">Skills</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="resume.html">Resume</a>
+            <a href="skills.html">Skills</a>
         </nav>
     </header>
 
@@ -42,7 +71,7 @@
 
         <h2>Honors & Awards</h2>
         <ul>
-            <li><strong>3.99 GPA:</strong> My GPA for freshman year of highschool.</li>
+            <li><strong>3.99 GPA:</strong> Freshman year of high school.</li>
             <li><strong>High Honor Roll:</strong> Recognized for consistent academic excellence.</li>
             <li><strong>AMC 8 Math Competition:</strong> 3rd Place (Schoolwide).</li>
             <li><strong>National Latin Exam:</strong> Cum Laude distinction.</li>
@@ -50,15 +79,39 @@
 
         <h2>Extracurricular Activities</h2>
         <ul>
-            <li><strong>Community Service:</strong> Part of an LLS team which raised over $50,000.</li>
-            <li><strong>Summer Programs:</strong> Compeltion of Wall Street in the Classroom offered at Fordham University (2025).</li>
+            <li><strong>Community Service:</strong> Member of an LLS team that raised over $50,000.</li>
+            <li><strong>Summer Programs:</strong> Completion of Wall Street in the Classroom at Fordham University (2025).</li>
             <li><strong>Athletics:</strong> Varsity Soccer, Basketball, Skiing.</li>
             <li><strong>Clubs:</strong> Robotics Team, Urban Barcoding Project, Debate Team, Pre-Med Club.</li>
             <li><strong>Arts:</strong> Piano.</li>
         </ul>
-    </main>
 
-    <footer>
+        <h2>Certificates & Documentation</h2>
+        
+        <div class="cert-grid">
+            <div class="cert-item">
+                <img src="IMG_4959 (2).jpeg" alt="AMC Certificate">
+                <div class="caption">AMC Certificate</div>
+            </div>
+
+            <div class="cert-item">
+                <img src="IMG_4960 (2).jpeg" alt="Latin National Certificate">
+                <div class="caption">Latin National Certificate</div>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <h3>Wall Street in the Classroom</h3>
+            <div class="caption">Certificate of Completion</div>
+            <embed src="Colin Poirier WSITC Certificate.pdf" type="application/pdf" class="pdf-viewer">
+            <p style="font-size:0.8rem; text-align:center; margin-top:5px;">
+                <a href="wallstreet-cert.pdf" target="_blank">Click here if PDF doesn't load</a>
+            </p>
+        </div>
+        
+    </main>
+    
+    <footer style="text-align: center; padding: 20px; color: #666;">
         <p>Contact: cpoirier@browning.edu</p>
     </footer>
 
