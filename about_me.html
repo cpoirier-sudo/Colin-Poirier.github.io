@@ -1,49 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me | Colin Poirier</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Colin Poirier</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">C</span><span>Colin Poirier</span></a>
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="about.html">About</a>
+        <a class="nav-link" href="resume.html">Resume</a>
+        <a class="nav-link" href="skills.html">Skills</a>
+      </nav>
+    </div>
+  </header>
 
-    <header class="navbar">
-        <div class="nav-container">
-            <div class="logo"><span class="avatar">C</span> Colin Poirier</div>
-            <nav>
-                <a href="index.html" class="nav-item">Home</a>
-                <a href="about_me.html" class="nav-item active">About</a>
-                <a href="resume.html" class="nav-item">Resume</a>
-                <a href="skills.html" class="nav-item">Skills</a>
-            </nav>
+  <main class="container">
+    <section class="page-title">
+      <h1>About Me</h1>
+    </section>
+
+    <section class="section">
+      <div class="hero"> <div class="hero-card reveal">
+          <h2>Introduction</h2>
+          <p>I am a sophomore at The Browning School with a passion for STEM and athletics. Beyond academics, I enjoy skiing and traveling to experience new cultures.</p>
+          <p><strong>Current Goals:</strong> I am working toward deepening my technical skills in robotics while maintaining a high level of academic excellence.</p>
+          <div class="contact-box">
+             <a class="btn btn-small" href="mailto:cpoirier@browning.edu">cpoirier@browning.edu</a>
+          </div>
         </div>
-    </header>
 
-    <main class="dashboard-container">
-        <div class="detail-container">
-            <a href="index.html" class="back-link">← Back to Dashboard</a>
-            
-            <h1 class="section-header">Who I Am</h1>
-            
-            <div class="about-content">
-                <p>I am currently a sophomore at <strong>The Browning School</strong>, where I excel academically and remain active in the community. My primary academic interests lie in STEM, specifically robotics and medicine, which I explore through my club involvement.</p>
-                
-                <p>Outside of the classroom, I am an enthusiastic athlete and explorer. My hobbies include:</p>
-                <ul class="interest-list">
-                    <li>Playing soccer and basketball</li>
-                    <li>Skiing</li>
-                    <li>Traveling to experience new cultures</li>
-                </ul>
-
-                <p>My current goals are to deepen my knowledge in technical fields and continue broadening my perspective through global travel.</p>
-            </div>
-            
-            <div class="contact-footer">
-                <p>Reach out at: <strong>cpoirier@browning.edu</strong></p>
-            </div>
+        <div class="side-stack reveal">
+          <div class="panel profile-panel">
+            <img src="IMG_4962 (2).PNG" alt="Colin Poirier" class="hero-img">
+          </div>
         </div>
-    </main>
+      </div>
+    </section>
 
+    <section class="section">
+      <div class="section-header"><h2>Gallery & Hobbies</h2></div>
+      <div class="photo-grid">
+        <div class="photo-card reveal">
+          <img src="Colin Poirier (1).png" alt="Playing soccer in Spain" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div class="photo-card reveal">
+          <img src="IMG_4962 (2).PNG" alt="Me traveling" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
