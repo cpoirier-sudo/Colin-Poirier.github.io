@@ -1,45 +1,69 @@
-/* Container for the small card images */
-.card-img-holder {
-    width: 100%;
-    height: 80px; /* Reduced height to keep it small */
-    background: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+/* Navbar Icon */
+.profile-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
-.card-img-holder img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Keeps image from stretching */
+/* Category Grid */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    max-width: 750px;
+    margin: 30px auto;
 }
 
-/* Special sizing for the "Resume" icon if you want it even smaller */
-.mini-icon {
-    width: 40px !important;
-    height: 40px !important;
-    object-fit: contain !important;
-}
-
-/* Category Card Layout */
+/* Card Styling */
 .category-card {
     background: white;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+    border-radius: 10px;
+    border: 1px solid #eee;
     text-decoration: none;
     color: #333;
-    transition: 0.2s ease;
     overflow: hidden;
+    transition: 0.2s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .category-card:hover {
-    border-color: #6366f1;
     transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* IMAGE HOLDER: This makes the icons small */
+.card-img-holder {
+    width: 100%;
+    height: 90px; /* Small height for the icon area */
+    background: #fcfcfc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img-holder img {
+    height: 80%; /* Keeps the image from touching the edges */
+    width: auto;
+    max-width: 90%;
+    object-fit: contain; /* Ensures the icon isn't cropped */
+}
+
+/* Resume Card (Centering text since there is no image) */
+.no-img-card {
+    justify-content: center;
+    min-height: 125px; 
 }
 
 .card-text {
     padding: 10px;
     text-align: center;
-    font-size: 0.9rem;
+}
+
+.card-text h3 {
+    margin: 0;
+    font-size: 0.95rem;
 }
