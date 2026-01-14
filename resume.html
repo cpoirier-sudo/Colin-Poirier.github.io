@@ -1,88 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume | Colin Poirier</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Colin Poirier</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html"><span class="brand-mark">C</span><span>Colin Poirier</span></a>
-      <nav class="nav">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="about.html">About</a>
-        <a class="nav-link active" href="resume.html">Resume</a>
-        <a class="nav-link" href="skills.html">Skills</a>
-      </nav>
-    </div>
-  </header>
+    <header class="navbar">
+        <div class="logo"><span class="avatar">C</span> <strong>Colin Poirier</strong></div>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about_me.html" class="nav-link">About</a>
+            <a href="resume.html" class="nav-link active">Resume</a>
+            <a href="skills.html" class="nav-link">Skills</a>
+        </nav>
+    </header>
 
-  <main class="container">
-    <section class="page-title">
-      <h1>Resume</h1>
-    </section>
+    <main class="container">
+        <div class="detail-card">
+            <a href="index.html" class="back-link">← Back to Dashboard</a>
+            <h2>Education</h2>
+            <div class="item">
+                <h3>The Browning School | New York, NY</h3>
+                <p>Sophomore (10th Grade) | Expected Graduation: 2028</p>
+            </div>
+            <div class="item">
+                <h3>Buckley Country Day School | Roslyn, NY</h3>
+                <p>Graduated: 2024</p>
+            </div>
 
-    <section class="section">
-      <div class="resume-top card reveal">
-        <div>
-          <h2 class="resume-name">Colin Poirier</h2>
-          <p class="muted">10th Grader at The Browning School</p>
+            <h2>Extracurricular Activities</h2>
+            <ul>
+                <li><strong>Athletics:</strong> Varsity Soccer</li>
+                <li><strong>Robotics Team:</strong> Technical development and competition</li>
+                <li><strong>Urban Barcoding Project:</strong> Scientific research</li>
+                <li><strong>Debate Team & Pre-Med Club:</strong> Academic enrichment</li>
+            </ul>
+
+            <h2>Work Experience</h2>
+            <div class="item">
+                <h3>Electrician Apprentice (Upcoming Summer)</h3>
+                <p>Will assist licensed electricians in installation and maintenance tasks to gain practical technical experience and industry insight.</p>
+            </div>
         </div>
-        <div class="resume-contact">
-          <a class="text-link" href="mailto:cpoirier@browning.edu">cpoirier@browning.edu</a>
-        </div>
-      </div>
-
-      <div class="cards two-col">
-        <article class="card reveal">
-          <h2>Education</h2>
-          <div class="item">
-            <h3>The Browning School</h3>
-            <p class="muted">New York, NY | Class of 2028</p>
-          </div>
-          <div class="item" style="margin-top:15px;">
-            <h3>Buckley Country Day School</h3>
-            <p class="muted">Roslyn, NY | Graduated 2024</p>
-          </div>
-          <h3 style="margin-top:20px;">Relevant Coursework</h3>
-          <p class="small">Adv. Algebra 2, Modern World History, Chemistry, Computer Science, Spanish.</p>
-        </article>
-
-        <article class="card reveal">
-          <h2>Honors & Awards</h2>
-          <ul class="clean-list">
-            <li><span class="dot"></span> <strong>High Honor Roll:</strong> Consistent academic excellence.</li>
-            <li><span class="dot"></span> <strong>AMC 8 Math:</strong> 3rd Place (Schoolwide).</li>
-            <li><span class="dot"></span> <strong>National Latin Exam:</strong> Cum Laude distinction.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <article class="card reveal">
-        <h2>Work Experience</h2>
-        <h3>Electrician Apprentice | Summer 2026</h3>
-        <p>Assisting licensed electricians in installation and maintenance tasks to gain practical technical experience and industry insight.</p>
-      </article>
-    </section>
-
-    <section class="section">
-      <div class="section-header"><h2>Activities</h2></div>
-      <div class="cards reveal">
-        <div class="card">
-          <h3>Athletics</h3>
-          <p class="small">Varsity Soccer, Track and Field, Swimming.</p>
-        </div>
-        <div class="card">
-          <h3>Clubs</h3>
-          <p class="small">Robotics Team, Urban Barcoding Project, Debate Team, Pre-Med Club.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-  <script src="script.js"></script>
+    </main>
 </body>
 </html>
