@@ -19,17 +19,39 @@
         h1 { border-bottom: 2px solid black; padding-bottom: 10px; margin-bottom: 20px; text-transform: uppercase; }
         h2 { margin-top: 30px; color: #333; font-size: 1.4rem; border-bottom: 1px solid #eee; padding-bottom: 5px; }
         
-        /* IMAGE STYLING */
-        figure { margin: 20px 0; text-align: center; }
-        .action-shot { 
-            width: 100%; max-width: 500px; 
-            border: 2px solid black; border-radius: 4px; 
-        }
-        figcaption { font-size: 0.9rem; font-style: italic; color: #555; margin-top: 5px; }
-
         /* LIST STYLING */
         ul { padding-left: 20px; margin-top: 10px; }
         li { margin-bottom: 10px; }
+
+        /* --- NEW PHOTO GALLERY STYLING --- */
+        .photo-gallery {
+            display: flex;       /* Puts items in a row */
+            gap: 15px;           /* Space between photos */
+            margin-top: 30px;
+            justify-content: space-between;
+        }
+
+        figure {
+            margin: 0;          /* Removes default spacing */
+            flex: 1;            /* Makes all 3 columns equal width */
+            text-align: center;
+        }
+
+        .action-shot { 
+            width: 100%;        /* Fills the column width */
+            height: 200px;      /* FORCES EQUAL HEIGHT */
+            object-fit: cover;  /* Crops image nicely to fit the box */
+            border: 2px solid black; 
+            border-radius: 4px; 
+            display: block;
+        }
+
+        figcaption { font-size: 0.9rem; font-style: italic; color: #555; margin-top: 5px; }
+
+        /* Mobile: Stack them on small screens */
+        @media (max-width: 600px) {
+            .photo-gallery { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
@@ -66,17 +88,25 @@
             <li><strong>Global Perspective:</strong> Broadening my worldview through continued global travel and cultural exchange.</li>
             <li><strong>Life Beyond High School:</strong> I am striving to earn a college degree and go on exchange to London.</li>
         </ul>
-           <figure>
-            <img src="Colin Poirier (1).png" alt="Playing Soccer" class="action-shot">
-        </figure>
-        <figure>
-            <img src=" A0150A75-95FF-4152-A126-D51CBEE76810.jpeg" alt="Skiing" class="action-shot">
-        </figure>
-        <figure>
-            <img src="IMG_4516.jpeg" alt="Traveling" class="action-shot">
-                    <figcaption>My Trip to London</figcaption>
-        </figure>
 
+        <div class="photo-gallery">
+            
+            <figure>
+                <img src="Colin Poirier (1).png" alt="Playing Soccer" class="action-shot">
+                <figcaption>Soccer Academy</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="A0150A75-95FF-4152-A126-D51CBEE76810.jpeg" alt="Skiing" class="action-shot">
+                <figcaption>Skiing</figcaption>
+            </figure>
+            
+            <figure>
+                <img src="IMG_4516.jpeg" alt="Traveling" class="action-shot">
+                <figcaption>My Trip to London</figcaption>
+            </figure>
+
+        </div>
 
     </main>
 
