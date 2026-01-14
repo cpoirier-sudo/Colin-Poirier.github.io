@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evan Sherman-Chan | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<script>
+  // Fade-in on scroll
+  const revealItems = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target); // animate once
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  revealItems.forEach((el) => observer.observe(el));
+</script>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">E</span>
+        <span>Evan Sherman-Chan</span>
+      </a>
+
+      <nav class="nav">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="resume.html">Resume</a>
+        <a class="nav-link" href="skills.html">Skills</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card reveal">
+        <h1 class="hero-title">Evan Sherman-Chan</h1>
+        <p class="hero-subtitle">Sophomore | The Browning School</p>
+
+        <p>
+          <strong>Welcome to my portfolio website.</strong> This site highlights who I am, my skills, and my accomplishments.
+        </p>
+        <p>
+          I am currently a sophomore at The Browning School, where I excel academically and remain active in the community. My primary academic interests lie in STEM, specifically robotics and medicine.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn" href="about.html">Read More</a>
+          <a class="btn btn-outline" href="resume.html">View Resume</a>
+        </div>
+
+        <p class="muted small" style="margin-top:12px;">
+          Contact: <a class="text-link" href="mailto:eshermanchan@browning.edu">eshermanchan@browning.edu</a>
+        </p>
+      </div>
+
+      <div class="side-stack reveal">
+        <div class="panel" style="padding:0; overflow:hidden;">
+            <img src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=1000&auto=format&fit=crop" 
+                 alt="Evan Sherman-Chan" 
+                 style="width:100%; height:250px; object-fit:cover; display:block;" />
+        </div>
+
+        <div class="panel">
+          <h2 class="panel-title">Quick Info</h2>
+          <ul class="quick-list">
+            <li><span class="quick-label">Location:</span> <span class="quick-value">New York, NY</span></li>
+            <li><span class="quick-label">School:</span> <span class="quick-value">The Browning School</span></li>
+            <li><span class="quick-label">Class:</span> <span class="quick-value">2028 (Sophomore)</span></li>
+            <li><span class="quick-label">Interests:</span> <span class="quick-value">STEM, Robotics, Medicine</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Explore</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <h3>About Me</h3>
+          <p class="muted">My background, hobbies, and goals.</p>
+          <a class="text-link" href="about.html">Open About →</a>
+        </article>
+
+        <article class="card reveal">
+          <h3>Resume</h3>
+          <p class="muted">Education, Coursework, Awards & Experience.</p>
+          <a class="text-link" href="resume.html">Open Resume →</a>
+        </article>
+
+        <article class="card reveal">
+          <h3>Skills</h3>
+          <p class="muted">Python, Teamwork, and technical abilities.</p>
+          <a class="text-link" href="skills.html">Open Skills →</a>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
