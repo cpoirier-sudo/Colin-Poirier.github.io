@@ -2,47 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About | Colin Poirier</title>
-    <link rel="stylesheet" href="style.css">
+    <title>About Me | Colin Poirier</title>
+    <style>
+        /* CSS STYLING */
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background: white; color: black; line-height: 1.6; }
+        
+        /* NAVIGATION BAR */
+        header { background: black; padding: 20px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 1.1rem; }
+        nav a:hover { color: #ccc; text-decoration: underline; }
+
+        /* MAIN CONTENT CONTAINER */
+        main { max-width: 800px; margin: 40px auto; padding: 40px; border: 1px solid black; border-radius: 8px; }
+        
+        /* TYPOGRAPHY */
+        h1 { border-bottom: 2px solid black; padding-bottom: 10px; margin-bottom: 20px; text-transform: uppercase; }
+        h2 { margin-top: 30px; color: #333; font-size: 1.4rem; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        
+        /* IMAGE STYLING */
+        figure { margin: 20px 0; text-align: center; }
+        .action-shot { 
+            width: 100%; max-width: 500px; 
+            border: 2px solid black; border-radius: 4px; 
+        }
+        figcaption { font-size: 0.9rem; font-style: italic; color: #555; margin-top: 5px; }
+
+        /* LIST STYLING */
+        ul { padding-left: 20px; margin-top: 10px; }
+        li { margin-bottom: 10px; }
+    </style>
 </head>
 <body>
 
     <header>
         <nav>
-            <a href="index.html" class="logo">Colin Poirier</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="skills.html">Skills</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="resume.html">Resume</a>
+            <a href="skills.html">Skills</a>
         </nav>
     </header>
 
     <main>
         <h1>Who I Am</h1>
         <p>
-            I am currently a sophomore at The Browning School, where I am a student athelete with interests in STEM. An interesting fact about me is that I had the oppurnutinty to go and play for the Real Madrid academy in Spain.
+            I am currently a sophomore at The Browning School, where I am a student athlete with interests in STEM. 
+            An interesting fact about me is that I had the opportunity to go and play for the <strong>Real Madrid academy</strong> in Spain.
         </p>
         
-<h2>My Interests</h2>
+        <h2>My Interests</h2>
         <p>Outside of the classroom, I am an enthusiastic athlete and explorer. My hobbies include:</p>
+        
+        <figure>
+            <img src="Colin Poirier (1).png" alt="Playing Soccer" class="action-shot">
+            <figcaption>Me playing soccer</figcaption>
+        </figure>
+
         <ul>
             <li><strong>Athletics:</strong> Playing varsity soccer and basketball.</li>
             <li><strong>Outdoors:</strong> Skiing and staying active.</li>
             <li><strong>Exploration:</strong> Traveling to experience new cultures and perspectives.</li>
         </ul>
 
-     <h2>My Goals</h2>
+        <h2>My Goals</h2>
         <p>I am driven to continue learning and growing in the following areas:</p>
         <ul>
             <li><strong>Technical Growth:</strong> Improving my writing and developing my skills in math, engineering, and pre-med.</li>
             <li><strong>Global Perspective:</strong> Broadening my worldview through continued global travel and cultural exchange.</li>
-            <li><strong>Life Beyond High School:</strong> I am striving to earn a college degree and go on exhcange to London.</li>
+            <li><strong>Life Beyond High School:</strong> I am striving to earn a college degree and go on exchange to London.</li>
         </ul>
     </main>
 
-    <footer>
+    <footer style="text-align: center; padding: 20px; color: #666; font-size: 0.8rem;">
         <p>Contact: cpoirier@browning.edu</p>
     </footer>
 
