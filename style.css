@@ -1,68 +1,68 @@
-/* Navbar Icon - Very Small */
-.profile-icon {
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 8px;
-    vertical-align: middle;
-}
-
-/* Category Grid - Keeps cards compact */
+/* Container for the cards - make the grid columns wider */
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-    max-width: 600px; /* Keeps the whole dashboard small */
-    margin: 30px auto;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Increased min-width from 180px to 280px */
+    gap: 25px;
+    max-width: 1000px; /* Allowed the container to be wider */
+    margin: 40px auto;
 }
 
-/* Card Styling */
+/* Updated Card Styling */
 .category-card {
     background: white;
-    border-radius: 8px;
-    border: 1px solid #eee;
+    border-radius: 15px; /* Slightly rounder corners */
+    border: 1px solid #eaeaea;
     text-decoration: none;
     color: #333;
     overflow: hidden;
-    transition: 0.2s ease;
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
+    min-height: 220px; /* Forces the blocks to be taller */
+    justify-content: space-between;
 }
 
-/* THE "SMALL BOX" FOR IMAGES */
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    border-color: #6366f1;
+}
+
+/* Image Holder - Keeps the actual photo small inside the bigger block */
 .card-img-holder {
     width: 100%;
-    height: 70px; /* Reduced height to keep boxes small */
+    height: 140px; /* Taller area for the image to sit in */
     background: #fcfcfc;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px; /* Adds space around the photo so it doesn't touch the edges */
+    padding: 20px;
 }
 
 .card-img-holder img {
-    max-width: 50px; /* Forces the image to be small like an icon */
-    max-height: 50px;
+    max-width: 80px; /* Keeps the photo small like an icon */
+    max-height: 80px;
     width: auto;
     height: auto;
     object-fit: contain;
-    border-radius: 4px; /* Optional: adds a slight roundness to the icon */
+    border-radius: 8px;
 }
 
-/* Resume Card (Centering text) */
-.no-img-card {
-    justify-content: center;
-    min-height: 100px; 
-}
-
+/* Text area inside the bigger card */
 .card-text {
-    padding: 10px;
+    padding: 20px;
     text-align: center;
+    background: #fff;
+    border-top: 1px solid #f9f9f9;
 }
 
 .card-text h3 {
     margin: 0;
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 1.2rem; /* Bigger text for bigger blocks */
+    font-weight: 700;
+}
+
+/* Resume Card specific (No photo, centered text) */
+.no-img-card {
+    justify-content: center;
 }
