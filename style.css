@@ -1,74 +1,40 @@
-/* Container for the larger tiles */
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Larger minimum width */
-    gap: 30px;
-    max-width: 1100px; /* Wider container */
-    margin: 0 auto;
-    padding: 20px;
+/* Navbar Profile Icon (The tiny one at the top) */
+.profile-icon {
+    width: 24px;   /* Shrinking from ~30px down to 24px */
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 8px;
+    vertical-align: middle;
+    border: 1px solid #eee;
 }
 
-/* Updated Large Card Styling */
-.category-card {
-    background: #ffffff;
-    border-radius: 20px; /* Softer rounded corners */
-    border: 1px solid #f0f0f0;
-    text-decoration: none;
-    color: #333;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    display: flex;
-    flex-direction: column;
-    min-height: 280px; /* Substantially taller blocks */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-}
-
-.category-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-    border-color: #6366f1;
-}
-
-/* Centered Image Holder */
+/* Card Image Holder (The container inside the blocks) */
 .card-img-holder {
     width: 100%;
-    height: 180px; /* Taller area for the image */
+    height: 120px; /* Reduced container height */
     background: #fafafa;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 15px;
 }
 
+/* The actual photo inside the card */
 .card-img-holder img {
-    max-width: 10px; /* Icon stays professional and small */
-    max-height: 10px;
+    max-width: 60px;  /* Forces the photo to stay small */
+    max-height: 60px;
     width: auto;
     height: auto;
     object-fit: contain;
-    border-radius: 12px;
+    border-radius: 8px; /* Keeps the icon look clean */
 }
 
-/* Large Text area */
-.card-text {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 25px;
-    text-align: center;
-    background: #ffffff;
-}
-
-.card-text h3 {
-    margin: 0;
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-}
-
-/* Resume Card specific (No photo, centered text) */
-.no-img-card {
-    justify-content: center;
-    background: linear-gradient(to bottom, #ffffff, #fcfcfc);
+/* Adjusting the grid to make tiles feel bigger relative to the tiny icons */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 30px auto;
 }
