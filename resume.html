@@ -1,43 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Resume</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colin Poirier | Resume</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+<script>
+  const revealItems = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target); 
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+  revealItems.forEach((el) => observer.observe(el));
+</script>
+
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">E</span>
+        <span class="brand-text">Evan Sherman-Chan</span>
+      </a>
 
-<div class="container">
-  <div class="sidebar">
-    <h1>Colin Poirier</h1>
-    <p>Sophomore • Browning</p>
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link active" href="resume.html">Resume</a>
+        <a class="nav-link" href="skills.html">Skills</a>
+      </nav>
+    </div>
+  </header>
 
-    <a href="about.html">About</a>
-    <a href="resume.html" class="active">Resume</a>
-    <a href="skills.html">Skills</a>
-  </div>
+  <main class="container">
+    <section class="page-title">
+      <h1>Resume</h1>
+    </section>
 
-  <div class="main">
-    <h2>Education</h2>
-    <hr>
+    <section class="section">
+      <div class="resume-top card reveal">
+        <div>
+          <h2 class="resume-name">Evan Sherman-Chan</h2>
+          <p class="muted">New York, NY</p>
+        </div>
+        <div class="resume-contact">
+          <a class="text-link" href="mailto:eshermanchan@browning.edu">eshermanchan@browning.edu</a>
+        </div>
+      </div>
 
-    <p><strong>The Browning School</strong> — Sophomore (Expected 2028)</p>
-    <p><strong>Buckley Country Day School</strong> — Graduated 2024</p>
+      <div class="cards two-col">
+        <article class="card reveal">
+          <h2>Education</h2>
+          <div class="item">
+            <h3>The Browning School</h3>
+            <p class="muted">New York, NY | Sophomore (10th Grade)</p>
+            <p class="small">Expected Graduation: 2028</p>
+          </div>
+          <div class="item" style="margin-top:15px;">
+            <h3>Buckley Country Day School</h3>
+            <p class="muted">Roslyn, NY</p>
+            <p class="small">Graduated: 2024</p>
+          </div>
+          
+          <h3 style="margin-top:20px;">Relevant Coursework</h3>
+          <ul class="clean-list">
+              <li><span class="dot"></span> Advanced Algebra 2</li>
+              <li><span class="dot"></span> Modern World History (Pre-AP)</li>
+              <li><span class="dot"></span> Chemistry</li>
+              <li><span class="dot"></span> Computer Science</li>
+              <li><span class="dot"></span> English & Spanish</li>
+          </ul>
+        </article>
 
-    <img src="IMG_4959 (2).jpeg" class="resume-img" alt="Awards">
+        <article class="card reveal">
+          <h2>Work Experience</h2>
+          <div class="item">
+            <h3>Electrician Apprentice</h3>
+            <p class="muted">Upcoming Summer Position</p>
+            <p>
+                Will assist licensed electricians in installation and maintenance tasks to gain practical technical experience and industry insight.
+            </p>
+          </div>
 
-    <h2>Honors & Awards</h2>
-    <hr>
-    <ul>
-      <li>High Honor Roll</li>
-      <li>AMC 8 Math Competition – 3rd Place</li>
-      <li>National Latin Exam – Cum Laude</li>
-    </ul>
+          <h2 style="margin-top:24px;">Honors & Awards</h2>
+          <ul class="clean-list">
+            <li><span class="dot"></span> <strong>High Honor Roll:</strong> Recognized for consistent academic excellence.</li>
+            <li><span class="dot"></span> <strong>AMC 8 Math Competition:</strong> 3rd Place (Schoolwide).</li>
+            <li><span class="dot"></span> <strong>National Latin Exam:</strong> Cum Laude distinction.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-    <img src="IMG_4960 (2).jpeg" class="resume-img" alt="Activities">
+    <section class="section">
+      <div class="section-header">
+        <h2>Extracurricular Activities</h2>
+      </div>
 
-  </div>
-</div>
+      <div class="cards reveal">
+        <article class="card">
+          <h3>Athletics</h3>
+          <ul class="clean-list">
+             <li><span class="dot"></span> Varsity Soccer</li>
+             <li><span class="dot"></span> Basketball (Hobby)</li>
+             <li><span class="dot"></span> Skiing (Hobby)</li>
+          </ul>
+        </article>
 
+        <article class="card">
+          <h3>Clubs & Organizations</h3>
+          <ul class="clean-list">
+            <li><span class="dot"></span> Robotics Team</li>
+            <li><span class="dot"></span> Urban Barcoding Project</li>
+            <li><span class="dot"></span> Debate Team</li>
+            <li><span class="dot"></span> Pre-Med Club</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Arts</h3>
+          <ul class="clean-list">
+            <li><span class="dot"></span> Piano</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
