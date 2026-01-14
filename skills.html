@@ -3,19 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Skills | Colin Poirier</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS STYLING */
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background: white; color: black; line-height: 1.6; }
+        
+        /* NAVIGATION */
+        header { background: black; padding: 20px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 1.1rem; }
+        nav a:hover { color: #ccc; text-decoration: underline; }
+        
+        /* MAIN CONTENT */
+        main { max-width: 800px; margin: 40px auto; padding: 40px; border: 1px solid black; border-radius: 8px; }
+        
+        /* HEADERS */
+        h1 { border-bottom: 2px solid black; padding-bottom: 10px; text-transform: uppercase; }
+        h2 { margin-top: 30px; color: #000; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+        h3 { margin-top: 20px; font-weight: bold; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* LIST STYLING */
+        .skills-list { list-style: none; padding: 0; }
+        .skills-list li { 
+            background: #ffffff; 
+            border-left: 4px solid black; /* Nice black accent bar on left */
+            margin: 10px 0; 
+            padding: 10px 15px; 
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            border-right: 1px solid #eee;
+        }
+
+        /* PROJECT EVIDENCE SECTION */
+        .project-section { margin-top: 50px; border-top: 4px solid black; padding-top: 20px; }
+        .project-img { width: 100%; max-width: 600px; border: 4px solid black; display: block; margin: 15px auto; }
+        .caption { text-align: center; font-style: italic; color: #555; font-size: 0.9rem; margin-bottom: 30px;}
+
+        /* PDF BUTTON */
+        .pdf-btn {
+            display: block; width: 100%; background: #f4f4f4; border: 2px dashed black;
+            text-align: center; padding: 20px; color: black; text-decoration: none;
+            font-weight: bold; transition: 0.3s; margin-top: 10px; box-sizing: border-box;
+        }
+        .pdf-btn:hover { background: #333; color: white; border-color: black; }
+    </style>
 </head>
 <body>
 
     <header>
         <nav>
-            <a href="index.html" class="logo">Colin Poirier</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="skills.html">Skills</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="resume.html">Resume</a>
+            <a href="skills.html">Skills</a>
         </nav>
     </header>
 
@@ -32,21 +70,35 @@
 
         <h2>Interpersonal Skills</h2>
         <ul class="skills-list">
-            <li><strong>Teamwork & Collaboration:</strong> My Bahamas project demonstrates my teamwork as my group was able to write a 20 page lab report and overall we had great communication.</li>
-            <li><strong>Communication:</strong> Shwon through my athletics expierence in debate, soccer, and basketball.</li>
+            <li><strong>Teamwork & Collaboration:</strong> My Bahamas project demonstrates my teamwork as my group was able to write a 20-page lab report and overall we had great communication.</li>
+            <li><strong>Communication:</strong> Shown through my athletics experience in debate, soccer, and basketball.</li>
             <li><strong>Leadership:</strong> I enjoy taking leadership roles in projects as needed.</li>
         </ul>
 
         <h2>Personal Attributes</h2>
         <ul class="skills-list">
             <li><strong>Problem-Solving:</strong> Analytical approach to challenges.</li>
-            <li><strong>Discipline:</strong> Waking up at 6 am everyday to do an hour and a half commute I think highlights my discipline and determination to excel.</li>
-            <li><strong>Adventurous Spirit:</strong> I have a passion of exploring new places and also taking on new challenges.</li>
+            <li><strong>Discipline:</strong> Waking up at 6 am every day to do an hour and a half commute highlights my discipline and determination to excel.</li>
+            <li><strong>Adventurous Spirit:</strong> I have a passion for exploring new places and taking on new challenges.</li>
         </ul>
+
+        <div class="project-section">
+            <h2>Project Evidence</h2>
+
+            <h3>Research Fieldwork</h3>
+            <img src="20250506_095040(0).jpg" alt="Bahamas Research" class="project-img">
+            <div class="caption">Bahamas research project</div>
+
+            <h3>References</h3>
+            <a href="Letter of Recommendation_Colin.pdf" target="_blank" class="pdf-btn">
+                📄 View LLS Recommendation Letter (PDF)<br>
+                <span style="font-weight:normal; font-size:0.9rem;">Highlighting my skills and contributions</span>
+            </a>
+        </div>
     </main>
 
     <footer>
-        <p>Contact: cpoirier@browning.edu</p>
+        <p style="text-align: center; color: #666; font-size: 0.9rem; margin-top: 20px;">Contact: cpoirier@browning.edu</p>
     </footer>
 
 </body>
