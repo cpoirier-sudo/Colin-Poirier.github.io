@@ -1,17 +1,46 @@
-<main class="container">
-  <section class="page-title">
-    <h1>About Me</h1>
-  </section>
-  
-  <section class="card reveal">
-    <h2>My Story</h2>
-    <p>My name is Colin Poirier. I live in NYC, and I go to the Browning School. Here, you can find information about me, including my hobbies and achievements.</p>
-    
-    <h3>Hobbies</h3>
-    <ul>
-      <li>Soccer & Basketball</li>
-      <li>Skiing</li>
-      <li>Robotics & Computer Building</li>
-    </ul>
-  </section>
-</main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Colin Poirier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo"><span class="avatar">C</span> <strong>Colin Poirier</strong></div>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about_me.html" class="nav-link active">About</a>
+            <a href="resume.html" class="nav-link">Resume</a>
+            <a href="skills.html" class="nav-link">Skills</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="detail-card">
+            <a href="index.html" class="back-link">← Back to Dashboard</a>
+            
+            <h2>Who I Am</h2>
+            <div class="item">
+                <p>I am currently a sophomore at The Browning School, where I excel academically and remain active in the community. My primary academic interests lie in STEM, specifically robotics and medicine, which I explore through my club involvement.</p>
+            </div>
+
+            <h2>Interests & Hobbies</h2>
+            <div class="item">
+                <p>Outside of the classroom, I am an enthusiastic athlete and explorer; my hobbies include playing <strong>soccer and basketball, skiing, and traveling</strong> to experience new cultures.</p>
+            </div>
+
+            <h2>My Goals</h2>
+            <div class="item">
+                <p>My current goals are to deepen my knowledge in these technical fields and continue broadening my perspective through global travel.</p>
+            </div>
+
+            <div class="photo-grid" style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                <img src="your-soccer-photo.jpg" alt="Soccer" style="width: 100%; border-radius: 8px; height: 200px; object-fit: cover;">
+                <img src="your-hobby-photo.jpg" alt="Hobbies" style="width: 100%; border-radius: 8px; height: 200px; object-fit: cover;">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
