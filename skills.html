@@ -7,9 +7,29 @@
         /* CSS STYLING */
         body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background: white; color: black; line-height: 1.6; }
         
-        /* NAVIGATION */
-        header { background: black; padding: 20px; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 1.1rem; }
+        /* --- NEW HEADER (Flexbox) --- */
+        header { 
+            background: black; 
+            padding: 10px 30px; 
+            display: flex;      
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        /* LOGO AREA (Top Left) */
+        .logo-area {
+            display: flex; align-items: center; gap: 10px;
+            color: white; font-weight: bold; font-size: 1.1rem; text-transform: uppercase;
+        }
+        
+        /* TINY ICON PICTURE */
+        .mini-pic {
+            width: 25px; height: 25px; border-radius: 50%; 
+            object-fit: cover; border: 1px solid white;
+        }
+
+        /* NAVIGATION LINKS (Top Right) */
+        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: bold; font-size: 1rem; }
         nav a:hover { color: #ccc; text-decoration: underline; }
         
         /* MAIN CONTENT */
@@ -44,11 +64,21 @@
             font-weight: bold; transition: 0.3s; margin-top: 10px; box-sizing: border-box;
         }
         .pdf-btn:hover { background: #333; color: white; border-color: black; }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            header { flex-direction: column; gap: 10px; }
+        }
     </style>
 </head>
 <body>
 
     <header>
+        <div class="logo-area">
+            <img src="IMG_4962.jpg" alt="Profile" class="mini-pic">
+            <span>Colin Poirier</span>
+        </div>
+
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Me</a>
