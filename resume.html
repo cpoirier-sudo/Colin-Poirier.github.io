@@ -7,9 +7,29 @@
         /* CSS STYLING */
         body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background: white; color: black; line-height: 1.6; }
         
-        /* NAVIGATION BAR */
-        header { background: black; padding: 20px; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 1.1rem; }
+        /* --- NEW HEADER (Flexbox) --- */
+        header { 
+            background: black; 
+            padding: 10px 30px; 
+            display: flex;      
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        /* LOGO AREA (Top Left) */
+        .logo-area {
+            display: flex; align-items: center; gap: 10px;
+            color: white; font-weight: bold; font-size: 1.1rem; text-transform: uppercase;
+        }
+        
+        /* TINY ICON PICTURE */
+        .mini-pic {
+            width: 25px; height: 25px; border-radius: 50%; 
+            object-fit: cover; border: 1px solid white;
+        }
+
+        /* NAVIGATION LINKS (Top Right) */
+        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: bold; font-size: 1rem; }
         nav a:hover { color: #ccc; text-decoration: underline; }
         
         /* MAIN CONTAINER */
@@ -31,12 +51,12 @@
         .cert-grid { 
             display: flex; 
             gap: 15px; 
-            justify-content: space-between; /* Spreads them out evenly */
+            justify-content: space-between; 
             margin-top: 20px; 
         }
         
         .cert-item { 
-            flex: 1; /* Makes all 3 boxes equal width */
+            flex: 1; 
             text-align: center; 
             border: 1px solid #ddd; 
             padding: 10px; 
@@ -45,18 +65,19 @@
 
         /* THIS FORCES ALL IMAGES TO BE THE SAME HEIGHT */
         .cert-item img { 
-            width: 100%;       /* Fills the box width */
-            height: 220px;     /* FORCED EQUAL HEIGHT */
-            object-fit: cover; /* Crops slightly to fit perfectly without stretching */
-            object-position: top; /* Focuses on the top of the certificate */
+            width: 100%;       
+            height: 220px;     
+            object-fit: cover; 
+            object-position: top; 
             border: 1px solid #000; 
             display: block;
         }
         
         .caption { font-size: 0.85rem; margin-top: 8px; font-weight: bold; color: #333; }
         
-        /* MOBILE FIX: Stack them if screen is too small */
+        /* MOBILE FIX */
         @media (max-width: 600px) {
+            header { flex-direction: column; gap: 10px; }
             .cert-grid { flex-direction: column; }
         }
     </style>
@@ -64,6 +85,11 @@
 <body>
 
     <header>
+        <div class="logo-area">
+            <img src="IMG_4962.jpg" alt="Profile" class="mini-pic">
+            <span>Colin Poirier</span>
+        </div>
+
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Me</a>
