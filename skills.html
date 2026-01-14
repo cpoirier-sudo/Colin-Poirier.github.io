@@ -1,53 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Skills | Colin Poirier</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Colin Poirier</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html"><span class="brand-mark">C</span><span>Colin Poirier</span></a>
-      <nav class="nav">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="about.html">About</a>
-        <a class="nav-link" href="resume.html">Resume</a>
-        <a class="nav-link active" href="skills.html">Skills</a>
-      </nav>
-    </div>
-  </header>
+    <header class="navbar">
+        <div class="logo"><span class="avatar">C</span> <strong>Colin Poirier</strong></div>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about_me.html" class="nav-link">About</a>
+            <a href="resume.html" class="nav-link">Resume</a>
+            <a href="skills.html" class="nav-link active">Skills</a>
+        </nav>
+    </header>
 
-  <main class="container">
-    <section class="page-title">
-      <h1>Skills</h1>
-    </section>
-
-    <section class="section">
-      <div class="skills-grid reveal">
-        <article class="card">
-          <h2>Technical</h2>
-          <p class="small">Python Programming, Computer Hardware, Photoshop, Blender.</p>
-          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop" alt="Programming" style="width:100%; height:150px; object-fit:cover; margin-top:15px; border-radius:12px;">
-        </article>
-
-        <article class="card">
-          <h2>Interpersonal</h2>
-          <p class="small">Teamwork, Communication, Problem-Solving, Adaptability.</p>
-          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop" alt="Collaboration" style="width:100%; height:150px; object-fit:cover; margin-top:15px; border-radius:12px;">
-        </article>
-      </div>
-    </section>
-
-    <section class="section reveal">
-        <div class="card">
-            <div class="chip-row">
-                <span class="chip">Python</span><span class="chip">Hardware</span><span class="chip">Photoshop</span><span class="chip">Teamwork</span><span class="chip">Adaptability</span>
+    <main class="container">
+        <div class="detail-card">
+            <a href="index.html" class="back-link">← Back to Dashboard</a>
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h4>Technical</h4>
+                    <p>Python Programming</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Interpersonal</h4>
+                    <p>Teamwork & Collaboration, Communication, Problem-Solving</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Personal</h4>
+                    <p>Adaptability, Adventurous Spirit, High Motivation</p>
+                </div>
             </div>
         </div>
-    </section>
-  </main>
-  <script src="script.js"></script>
+    </main>
 </body>
 </html>
