@@ -3,36 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <title>Colin Poirier | Home</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* GLOBAL STYLES */
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background: white; color: black; }
+        
+        /* NAVIGATION */
+        header { background: black; padding: 20px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 1.1rem; }
+        nav a:hover { color: #ccc; text-decoration: underline; }
+
+        /* MAIN LAYOUT */
+        main { 
+            max-width: 900px; 
+            margin: 60px auto; 
+            padding: 20px;
+            /* This creates the Side-by-Side layout */
+            display: flex; 
+            align-items: center; 
+            gap: 50px; 
+        }
+
+        /* LEFT COLUMN (IMAGE) */
+        .left-col {
+            flex: 1; /* Takes up 1 part of space */
+        }
+        .hero-img {
+            width: 100%;
+            max-width: 350px; /* Controls image size */
+            border-radius: 8px;
+            border: 4px solid black;
+            box-shadow: 10px 10px 0px #ccc; /* cool shadow effect */
+        }
+        .caption {
+            font-size: 0.9rem; color: #555; margin-top: 10px; font-style: italic; text-align: center;
+        }
+
+        /* RIGHT COLUMN (TEXT) */
+        .right-col {
+            flex: 1.5; /* Takes up slightly more space than image */
+            text-align: left;
+        }
+
+        h1 { font-size: 2.5rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; line-height: 1.1;}
+        p { font-size: 1.1rem; color: #333; margin-bottom: 25px; line-height: 1.6; }
+
+        .btn { 
+            background: black; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; 
+        }
+        .btn:hover { background: #333; }
+
+        /* MOBILE FIX: Stacks them vertically on small screens */
+        @media (max-width: 700px) {
+            main { flex-direction: column; text-align: center; }
+            .right-col { text-align: center; }
+        }
+
+        footer { margin-top: 50px; text-align: center; font-size: 0.8rem; color: #666; padding-bottom: 20px;}
+    </style>
 </head>
 <body>
 
     <header>
         <nav>
-            <a href="index.html" class="logo">Colin Poirier</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="skills.html">Skills</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="resume.html">Resume</a>
+            <a href="skills.html">Skills</a>
         </nav>
     </header>
 
-    <main style="text-align: center; padding: 60px 20px;">
-        <h1>Colin Poirier's Portfolio</h1>
-        <p>
-            I am Colin Poirier, I currently attend Browning. The purpose of this website is to highlight some skills I have learned in my life and at school, along with some accomplishments.
-        </p>
-        <br>
-        <a href="about.html" class="btn">Read About Me</a>
-        <a href="resume.html" class="btn" style="background-color: #7f8c8d;">View My Resume</a>
-        <a href="skills.html" class="btn" style="background-color: #2C3E50;">View My Skills</a>
-        
+    <main>
+        <div class="left-col">
+            <img src="home-pic.png" alt="Colin Poirier" class="hero-img">
+        </div>
+
+        <div class="right-col">
+            <h1>Colin Poirier</h1>
+            <p style="font-weight: bold; color: #666;">Student | Athlete | Builder</p>
+            
+            <p>
+                Colin Poirier's Website. <br>
+                I'm Colin Poirier, currently a sophmore attending Browning. The purpose of this website is to highlight some skills I have learned in my life and at school, along with some accomplishments.
+            </p>
+            
+            <a href="about.html" class="btn">Read About Me</a>
+            <a href="resume.html" class="btn" style="background-color: #7f8c8d;">View My Resume</a> 
+            <a href="skills.html" class="btn" style="background-color: #2C3E50;">View My Skills</a>
+        </div>
     </main>
 
     <footer>
-        <p>Contact: cpoirier@browning.edu</p>
+        <p>&copy; 2026 Colin Poirier</p>
     </footer>
 
 </body>
