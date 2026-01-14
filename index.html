@@ -9,61 +9,68 @@
 <body>
 
     <header class="navbar">
-        <div class="logo"><span class="avatar">C</span> <strong>Colin Poirier</strong></div>
-        <nav>
-            <a href="index.html" class="nav-link active">Home</a>
-            <a href="about_me.html" class="nav-link">About</a>
-            <a href="resume.html" class="nav-link">Resume</a>
-            <a href="skills.html" class="nav-link">Skills</a>
-        </nav>
+        <div class="nav-container">
+            <div class="logo"><span class="avatar">C</span> Colin Poirier</div>
+            <nav>
+                <a href="index.html" class="nav-item active">Home</a>
+                <a href="about_me.html" class="nav-item">About</a>
+                <a href="resume.html" class="nav-item">Resume</a>
+                <a href="skills.html" class="nav-item">Skills</a>
+            </nav>
+        </div>
     </header>
 
-    <main class="container">
-        <div class="dashboard-grid">
+    <main class="dashboard-container">
+        <div class="main-grid">
             <div class="card hero-card">
                 <h1>Colin Poirier</h1>
                 <p class="subtitle">Personal Website</p>
                 <p class="tagline">10th Grader, NYC, The Browning School</p>
                 <p class="description">
-                    I am a sophomore at The Browning School, where I excel academically and remain active in the community. 
-                    My interests lie in STEM, specifically robotics and medicine.
+                    My name is Colin Poirier. I live in NYC, and I go to the Browning School. 
+                    Here, you can find information about me, including my hobbies and achievements.
                 </p>
                 <div class="btn-group">
-                    <a href="about_me.html" class="btn btn-primary">About Me</a>
-                    <a href="resume.html" class="btn btn-outline">Resume</a>
+                    <a href="about_me.html" class="btn btn-blue">About Me</a>
+                    <a href="resume.html" class="btn btn-white">Resume</a>
                 </div>
-                <p class="contact-email">Contact: <strong>cpoirier@browning.edu</strong></p>
+                <p class="contact-text">Contact: <strong>cpoirier@browning.edu</strong></p>
             </div>
 
-            <div class="card info-card">
-                <h3>Quick Info</h3>
-                <p><strong>City:</strong> New York City</p>
-                <p><strong>School:</strong> The Browning School</p>
-                <p><strong>Interests:</strong> Robotics, Medicine, Soccer</p>
-            </div>
+            <div class="side-column">
+                <div class="card info-card">
+                    <h3>Quick Info</h3>
+                    <p><strong>City:</strong> New York City</p>
+                    <p><strong>School:</strong> The Browning School</p>
+                    <p><strong>Interests:</strong> Robotics, Medicine, Soccer</p>
+                </div>
 
-            <div class="card navigate-card">
-                <h3>Navigate</h3>
-                <ul>
-                    <li><a href="about_me.html">About Me →</a></li>
-                    <li><a href="resume.html">Resume →</a></li>
-                    <li><a href="skills.html">Skills →</a></li>
-                </ul>
+                <div class="card navigate-card">
+                    <h3>Navigate</h3>
+                    <ul class="nav-links">
+                        <li><a href="about_me.html">About Me →</a></li>
+                        <li><a href="resume.html">Resume →</a></li>
+                        <li><a href="skills.html">Skills →</a></li>
+                    </ul>
+                </div>
             </div>
+        </div>
 
-            <div class="card sub-card">
+        <h2 class="section-title">Sections</h2>
+        <div class="sections-grid">
+            <div class="card footer-card">
                 <h3>About Me</h3>
-                <p>Hobbies, goals, and global travel.</p>
+                <p>Here, you can find my interests and hobbies.</p>
                 <a href="about_me.html" class="open-link">Open About →</a>
             </div>
-            <div class="card sub-card">
+            <div class="card footer-card">
                 <h3>Resume</h3>
-                <p>Education and activities.</p>
+                <p>Here, you can find my education, activities, and projects.</p>
                 <a href="resume.html" class="open-link">Open Resume →</a>
             </div>
-            <div class="card sub-card">
+            <div class="card footer-card">
                 <h3>Skills</h3>
-                <p>Technical and personal strengths.</p>
+                <p>Here, you can find my skills.</p>
                 <a href="skills.html" class="open-link">Open Skills →</a>
             </div>
         </div>
