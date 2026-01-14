@@ -1,42 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About Me</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colin Poirier | About</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+<script>
+  const revealItems = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target); 
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+  revealItems.forEach((el) => observer.observe(el));
+</script>
+
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">E</span>
+        <span class="brand-text">Evan Sherman-Chan</span>
+      </a>
 
-<div class="container">
-  <div class="sidebar">
-    <h1>Colin Poirier</h1>
-    <p>Sophomore • Browning</p>
+      <nav class="nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="about.html">About</a>
+        <a class="nav-link" href="resume.html">Resume</a>
+        <a class="nav-link" href="skills.html">Skills</a>
+      </nav>
+    </div>
+  </header>
 
-    <a href="about.html" class="active">About</a>
-    <a href="resume.html">Resume</a>
-    <a href="skills.html">Skills</a>
-  </div>
+  <main class="container">
+    <section class="page-title">
+      <h1>About Me</h1>
+      <p class="muted">
+        Explorer, Athlete, and Aspiring Engineer/Medic.
+      </p>
+    </section>
 
-  <div class="main">
-    <h2>Who I Am</h2>
-    <hr>
+    <section class="section">
+      <div class="cards two-col">
+        <article class="card reveal">
+          <h2>Who I Am</h2>
+          <p>
+            I am currently a sophomore at The Browning School, where I excel academically and remain active in the community. My primary academic interests lie in STEM, specifically <strong>robotics and medicine</strong>, which I explore through my club involvement.
+          </p>
+          <p>
+            Outside of the classroom, I am an enthusiastic athlete and explorer; my hobbies include playing <strong>soccer and basketball, skiing, and traveling</strong> to experience new cultures. My current goals are to deepen my knowledge in these technical fields and continue broadening my perspective through global travel.
+          </p>
 
-    <img src="IMG_4962 (2).PNG" class="profile-img" alt="Profile Photo">
+          <div class="contact-box">
+            <h3>Contact</h3>
+            <a class="btn btn-small" href="mailto:cpoirier@browning.edu">cpoirier@browning.edu</a>
+          </div>
+        </article>
 
-    <p>
-      I am currently a sophomore at The Browning School, where I excel academically
-      and remain active in the community. My primary interests lie in STEM,
-      particularly robotics and medicine.
-    </p>
+        <article class="card reveal" id="achievements">
+          <h2>Current Goals</h2>
+          <ul class="clean-list">
+            <li><span class="dot"></span> Deepen technical knowledge in Robotics & Medicine</li>
+            <li><span class="dot"></span> Broaden perspective through global travel</li>
+            <li><span class="dot"></span> Gain practical industry insight (Electrician Apprenticeship)</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-    <p>
-      Outside the classroom, I am an enthusiastic athlete and explorer. I enjoy
-      soccer, basketball, skiing, and traveling to experience new cultures.
-      My goal is to deepen my technical knowledge while continuing to grow
-      globally and personally.
-    </p>
-  </div>
-</div>
-
+          </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
