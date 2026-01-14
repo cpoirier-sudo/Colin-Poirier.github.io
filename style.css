@@ -1,28 +1,54 @@
-/* This shrinks the image and centers it */
-.hero-img {
-  width: 100%;
-  max-width: 300px; /* Limits how wide the photo can get */
-  height: 350px;    /* Limits the height */
-  object-fit: cover;
-  border-radius: 15px;
-  display: block;
-  margin: 0 auto;   /* Centers the image in its panel */
-  border: 4px solid white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+/* Profile Icon Styling */
+.profile-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    border: 1px solid #ddd;
 }
 
-/* Adjusts the hero section layout so it doesn't stretch */
-.hero {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 40px;
-  align-items: center; /* Keeps text and image vertically centered */
-  padding: 40px 0;
+/* Dashboard Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
 }
 
-/* Fix for the visual cards on the home page */
-.card-image-container {
-  width: 100%;
-  height: 150px; /* Makes the preview images much smaller */
-  overflow: hidden;
+/* Navigation Cards */
+.nav-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #eaeaea;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.nav-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-color: #6366f1;
+}
+
+.nav-card h3 {
+    margin-top: 0;
+    color: #1a1a1a;
+}
+
+.link-text {
+    display: block;
+    margin-top: 15px;
+    color: #6366f1;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.hero-simple {
+    text-align: center;
+    padding: 60px 0;
 }
