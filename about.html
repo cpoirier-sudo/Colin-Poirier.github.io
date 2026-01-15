@@ -11,13 +11,12 @@
         header { 
             background: black; 
             padding: 10px 30px; 
-            /* NEW: These 3 lines create the Left/Right layout */
-            display: flex;                  /* <<< NEW */
-            justify-content: space-between; /* <<< NEW */
-            align-items: center;            /* <<< NEW */
+            display: flex;            
+            justify-content: space-between; 
+            align-items: center;            
         }
 
-        /* LOGO AREA (Top Left) - ENTIRE SECTION IS NEW */
+        /* LOGO AREA (Top Left) */
         .logo-area {
             display: flex;
             align-items: center;
@@ -28,11 +27,11 @@
             text-transform: uppercase;
         }
         
-        /* TINY ICON PICTURE - ENTIRE SECTION IS NEW */
+        /* TINY ICON PICTURE */
         .mini-pic {
-            width: 25px;   /* Small size */
+            width: 25px;   
             height: 25px;  
-            border-radius: 50%; /* Circle shape */
+            border-radius: 50%; 
             object-fit: cover; 
             border: 1px solid white; 
         }
@@ -56,7 +55,7 @@
         .photo-gallery {
             display: flex;       
             gap: 15px;           
-            margin-top: 30px;
+            margin-top: 20px; /* Slight gap between title and photos */
             justify-content: space-between;
         }
 
@@ -121,11 +120,12 @@
         <ul>
             <li><strong>Technical Growth:</strong> Improving my writing and developing my skills in math, engineering, and pre-med.</li>
             <li><strong>Global Perspective:</strong> Broadening my worldview through continued global travel and cultural exchange.</li>
-            <li><strong>Life Beyond High School:</strong> I am striving to earn a college degree and go on exchange to London.</li>
+            <li><strong>Life Beyond High School:</strong> I am striving to earn a college degree and go on an exchange to London.</li>
         </ul>
 
+        <h2>Photos</h2>
+        
         <div class="photo-gallery">
-            <h2>Photos</h2>
             <figure>
                 <img src="Colin Poirier (1).png" alt="Playing Soccer" class="action-shot">
                 <figcaption>Soccer Academy</figcaption>
